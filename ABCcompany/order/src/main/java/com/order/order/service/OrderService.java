@@ -3,12 +3,16 @@ package com.order.order.service;
 import com.order.order.dto.OrderDTO;
 import com.order.order.model.Order;
 import com.order.order.repo.OrderRepo;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@Transactional
 public class OrderService {
     @Autowired
     private OrderRepo orderRepo;
